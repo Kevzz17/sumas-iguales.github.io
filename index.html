@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Asientos Contables</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Asientos Contables</h1>
+        <div class="container__header">
+            <button class="btn btn--add-table" onclick="addTable()">Agregar Tabla</button>
+            <button id="open-calculator">Calculadora</button>
+        </div>
+        <div class="tables-container" id="tablesContainer"></div>
+    </div>
+
+    <!-- Botón para abrir la calculadora -->
+
+
+    <!-- Ventana flotante (Modal) -->
+    <div id="calculator-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal__header">
+                <h2>IVA/RF</h2>
+                <span id="close-calculator" class="close">&times;</span>
+            </div>
+            <label for="amount">Valor Base:</label>
+            <input type="number" id="amount" placeholder="Ingrese valor" />
+
+            <label for="percentage">Seleccionar porcentaje:</label>
+            <select id="percentage">
+                <option value="19">IVA (19%)</option>
+                <option value="2.5">Retención en la Fuente (2.5%)</option>
+                <option value="5">Otro porcentaje (5%)</option>
+                <!-- Puedes añadir más opciones si es necesario -->
+            </select>
+
+            <button id="calculate-button">Calcular</button>
+
+            <div id="result" class="result">
+                <!-- Resultado será mostrado aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
